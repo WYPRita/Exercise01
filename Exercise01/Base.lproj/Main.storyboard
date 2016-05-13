@@ -1,14 +1,59 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="ZrZ-md-sal">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="BWg-bW-BYr">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
+        <!--new-->
+        <scene sceneID="FKX-pr-buc">
+            <objects>
+                <viewController id="IYK-6Q-7TS" customClass="TableViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="huq-S3-g8m">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="ZQj-rY-PMr">
+                                <rect key="frame" x="20" y="20" width="280" height="499"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="IYK-6Q-7TS" id="S3v-MY-c6u"/>
+                                    <outlet property="delegate" destination="IYK-6Q-7TS" id="h3o-5L-m5E"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="new" id="OZD-1n-BQj"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pVi-eu-Q0j" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-466" y="-941"/>
+        </scene>
+        <!--Tab View Controller-->
+        <scene sceneID="hin-V2-vNP">
+            <objects>
+                <tabBarController id="BWg-bW-BYr" customClass="TabViewController" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="ZjZ-I7-A1s">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="IYK-6Q-7TS" kind="relationship" relationship="viewControllers" id="eYb-0N-ACG"/>
+                        <segue destination="ZrZ-md-sal" kind="relationship" relationship="viewControllers" id="Xr9-dz-5Xw"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y62-gh-Rco" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1006" y="-626"/>
+        </scene>
+        <!--old-->
         <scene sceneID="f0b-ll-aha">
             <objects>
                 <navigationController id="ZrZ-md-sal" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="old" id="9KB-J7-rPm"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="so8-lL-qE1">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -19,7 +64,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h8E-ST-4N9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-193" y="-76"/>
+            <point key="canvasLocation" x="-466" y="-301"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="adL-pQ-zSs">
@@ -29,15 +74,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A页面" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sYi-ge-Zoh">
+                                <rect key="frame" x="127" y="168" width="67" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="TjL-c8-x6y">
                                 <rect key="frame" x="102" y="266" width="116" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="进入B页面">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="buttonPressed:" destination="3Pk-PV-xwW" eventType="touchUpInside" id="PwZ-sp-ph2"/>
+                                    <action selector="buttonPressed:" destination="3Pk-PV-xwW" eventType="touchUpInside" id="hEf-n3-I04"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -47,7 +99,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CKX-uT-F7e" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="207" y="-76"/>
+            <point key="canvasLocation" x="-6" y="-301"/>
         </scene>
     </scenes>
 </document>

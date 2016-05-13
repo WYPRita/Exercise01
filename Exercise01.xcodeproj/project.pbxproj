@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B42C95911CE30CFA008FAE3A /* TabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B42C95901CE30CFA008FAE3A /* TabViewController.m */; };
+		B42C95941CE30EA9008FAE3A /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B42C95931CE30EA9008FAE3A /* TableViewController.m */; };
 		B485A5111CCA708D00314F47 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B485A5101CCA708D00314F47 /* main.m */; };
 		B485A5141CCA708D00314F47 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B485A5131CCA708D00314F47 /* AppDelegate.m */; };
 		B485A5171CCA708D00314F47 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B485A5161CCA708D00314F47 /* MainViewController.m */; };
@@ -39,6 +41,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B42C958F1CE30CFA008FAE3A /* TabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabViewController.h; sourceTree = "<group>"; };
+		B42C95901CE30CFA008FAE3A /* TabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabViewController.m; sourceTree = "<group>"; };
+		B42C95921CE30EA9008FAE3A /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		B42C95931CE30EA9008FAE3A /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 		B485A50C1CCA708D00314F47 /* Exercise01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Exercise01.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B485A5101CCA708D00314F47 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B485A5121CCA708D00314F47 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -113,8 +119,10 @@
 			children = (
 				B485A5121CCA708D00314F47 /* AppDelegate.h */,
 				B485A5131CCA708D00314F47 /* AppDelegate.m */,
-				B485A5151CCA708D00314F47 /* MainViewController.h */,
-				B485A5161CCA708D00314F47 /* MainViewController.m */,
+				B42C958F1CE30CFA008FAE3A /* TabViewController.h */,
+				B42C95901CE30CFA008FAE3A /* TabViewController.m */,
+				B42C95921CE30EA9008FAE3A /* TableViewController.h */,
+				B42C95931CE30EA9008FAE3A /* TableViewController.m */,
 				B485A5181CCA708D00314F47 /* Main.storyboard */,
 				B485A51B1CCA708D00314F47 /* Assets.xcassets */,
 				B485A51D1CCA708D00314F47 /* LaunchScreen.storyboard */,
@@ -133,6 +141,8 @@
 		B485A50F1CCA708D00314F47 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B485A5151CCA708D00314F47 /* MainViewController.h */,
+				B485A5161CCA708D00314F47 /* MainViewController.m */,
 				B485A5101CCA708D00314F47 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -288,10 +298,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B42C95911CE30CFA008FAE3A /* TabViewController.m in Sources */,
 				B485A5451CCA76C600314F47 /* SecondViewController.m in Sources */,
 				B485A54A1CCA791400314F47 /* ThirdViewController.m in Sources */,
 				B485A5171CCA708D00314F47 /* MainViewController.m in Sources */,
 				B485A5141CCA708D00314F47 /* AppDelegate.m in Sources */,
+				B42C95941CE30EA9008FAE3A /* TableViewController.m in Sources */,
 				B485A5111CCA708D00314F47 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -518,6 +530,7 @@
 				B485A53B1CCA708D00314F47 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B485A53C1CCA708D00314F47 /* Build configuration list for PBXNativeTarget "Exercise01Tests" */ = {
 			isa = XCConfigurationList;
@@ -526,6 +539,7 @@
 				B485A53E1CCA708D00314F47 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B485A53F1CCA708D00314F47 /* Build configuration list for PBXNativeTarget "Exercise01UITests" */ = {
 			isa = XCConfigurationList;
@@ -534,6 +548,7 @@
 				B485A5411CCA708D00314F47 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

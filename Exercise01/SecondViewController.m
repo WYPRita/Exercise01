@@ -6,7 +6,9 @@
 //  Copyright © 2016年 wxweven. All rights reserved.
 //
 
+
 #import "SecondViewController.h"
+#import "MainViewController.h"
 #import "ThirdViewController.h"
 
 @interface SecondViewController ()
@@ -17,15 +19,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
+    //添加返回上一级按钮
+    UIBarButtonItem *leftBarBtn = [[UIBarButtonItem alloc] initWithTitle:@"返回上一级" style:UIBarButtonItemStylePlain target:self action:@selector(leftBarBtnClicked:)];
+    self.navigationItem.leftBarButtonItem = leftBarBtn;
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)leftBarBtnClicked:(id)sender
+{
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 
+//点击"进入C页面"按钮
 - (IBAction)buttonPressed:(id)sender {
     
     ThirdViewController *third = [[ThirdViewController alloc] init];
@@ -33,14 +40,5 @@
     [self.navigationController pushViewController:third animated:true];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
