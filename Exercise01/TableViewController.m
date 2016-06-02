@@ -21,7 +21,7 @@
     // Do any additional setup after loading the view.
     
     self.array = @[@"A",@"B",@"C",@"D",@"E",@"F",@"G",@"H",@"I",
-                   @"G",@"K",@"L",@"M",@"N",@"O",@"P",@"Q",@"R",
+                   @"J",@"K",@"L",@"M",@"N",@"O",@"P",@"Q",@"R",
                    @"S",@"T",@"U",@"V",@"W",@"X",@"Y",@"Z"];
 }
 

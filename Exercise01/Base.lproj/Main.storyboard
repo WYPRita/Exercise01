@@ -1,21 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="BWg-bW-BYr">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BWg-bW-BYr">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--new-->
         <scene sceneID="FKX-pr-buc">
             <objects>
                 <viewController id="IYK-6Q-7TS" customClass="TableViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0kY-Uh-ZcL"/>
+                        <viewControllerLayoutGuide type="bottom" id="IG9-g9-YO8"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="huq-S3-g8m">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="ZQj-rY-PMr">
-                                <rect key="frame" x="20" y="20" width="280" height="499"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZQj-rY-PMr">
+                                <rect key="frame" x="16" y="2" width="288" height="517"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="IYK-6Q-7TS" id="S3v-MY-c6u"/>
@@ -24,12 +28,18 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="ZQj-rY-PMr" secondAttribute="trailing" id="P19-fz-4Ow"/>
+                            <constraint firstItem="ZQj-rY-PMr" firstAttribute="top" secondItem="huq-S3-g8m" secondAttribute="topMargin" constant="2" id="bzJ-zR-z3H"/>
+                            <constraint firstItem="ZQj-rY-PMr" firstAttribute="leading" secondItem="huq-S3-g8m" secondAttribute="leadingMargin" id="dVH-Hb-8h9"/>
+                            <constraint firstItem="IG9-g9-YO8" firstAttribute="top" secondItem="ZQj-rY-PMr" secondAttribute="bottom" id="ou6-ki-z8X"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="new" id="OZD-1n-BQj"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pVi-eu-Q0j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-466" y="-941"/>
+            <point key="canvasLocation" x="-460" y="-961"/>
         </scene>
         <!--Tab View Controller-->
         <scene sceneID="hin-V2-vNP">
@@ -70,20 +80,22 @@
         <scene sceneID="adL-pQ-zSs">
             <objects>
                 <viewController id="3Pk-PV-xwW" customClass="MainViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KrN-5z-HVP"/>
+                        <viewControllerLayoutGuide type="bottom" id="BaN-7a-CaX"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="f1M-eG-K8Y">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A页面" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sYi-ge-Zoh">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="A页面" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sYi-ge-Zoh">
                                 <rect key="frame" x="127" y="168" width="67" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="TjL-c8-x6y">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TjL-c8-x6y">
                                 <rect key="frame" x="102" y="266" width="116" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="进入B页面">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -94,6 +106,9 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="sYi-ge-Zoh" firstAttribute="top" secondItem="KrN-5z-HVP" secondAttribute="bottom" constant="104" id="5EP-Xd-r0u"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="WxB-32-mgb"/>
                 </viewController>

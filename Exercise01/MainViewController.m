@@ -19,17 +19,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    //添加返回上一级按钮
-    UIBarButtonItem *leftBarBtn = [[UIBarButtonItem alloc] initWithTitle:@"返回上一级" style:UIBarButtonItemStylePlain target:self action:@selector(leftBarBtnClicked:)];
-    self.navigationItem.leftBarButtonItem = leftBarBtn;
     
 }
 
-- (void)leftBarBtnClicked:(id)sender
-{
-    ThirdViewController *third = [[ThirdViewController alloc]init];
-    [self.navigationController pushViewController:third animated:YES];
-}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
